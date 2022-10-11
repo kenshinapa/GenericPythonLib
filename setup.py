@@ -4,7 +4,7 @@ import codecs
 from setuptools import setup
 
 
-LIB_NAME = "test_lib"
+LIB_NAME = "arty_random_test_lib"
 VERSION = "1.0.0"
 DESCRIPTION = "Dummy utility library"
 
@@ -49,7 +49,7 @@ setup(
     url="https://github.com/kenshinapa/GenericPythonLib.git",
     author="Arturo Padilla Ayala",
     author_email="r2padillaayala@gmail.com",
-    packages=["test_lib"],
+    packages=["arty_random_test_lib"],
     zip_safe=False,
     install_requires=reqs("requirements.txt"),
 )
