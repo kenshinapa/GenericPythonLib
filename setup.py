@@ -40,7 +40,7 @@ setup(
     url="https://github.com/kenshinapa/GenericPythonLib.git",
     author="Arturo Padilla Ayala",
     author_email="r2padillaayala@gmail.com",
-    packages=["testing", "first.upload"],
+    packages=["test_lib"],
     zip_safe=False,
     install_requires=reqs("requirements.txt"),
 )
