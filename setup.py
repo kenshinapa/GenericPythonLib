@@ -1,8 +1,12 @@
 """Module to setup library."""
 from pathlib import Path
-
+import codecs
 from setuptools import setup
 
+
+LIB_NAME = "test_lib"
+VERSION = "1.0.0"
+DESCRIPTION = "Dummy utility library"
 
 def strip_comments(line: str):
     """Remove comments from line."""
@@ -33,10 +37,15 @@ def reqs(file_name: str):
     """
     return [req for subreq in _reqs(file_name) for req in subreq]
 
+with codecs.open("README.md", "r", "utf-8") as fh:
+    long_description = fh.read()
+
 setup(
-    name="test_lib",
-    version="1.0.0",
-    description="Dummy utility library",
+    name=LIB_NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    long_description_type="text/markdown",
+    long_description=long_description,
     url="https://github.com/kenshinapa/GenericPythonLib.git",
     author="Arturo Padilla Ayala",
     author_email="r2padillaayala@gmail.com",
